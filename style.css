@@ -1,0 +1,72 @@
+body{
+	background-color: #ECECEA;
+	font-family: 'Caveat Brush', cursive;
+}
+
+div.polaroid {
+	display: inline-block;
+	 /* Standard syntax */
+	margin-left: 5%;
+	margin-right: 5%;
+
+	width: 250px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	text-align: center;
+  }
+  
+  div.container {
+	padding: 10px;
+  } 
+.titles{
+	text-align: center;
+	margin-left: auto;
+    margin-right: auto;
+	width: 8em
+}
+
+.music{
+	margin-left: 50px;
+    margin-right: auto;	
+}
+#menu
+{
+	z-index: 10;
+	text-align: center;
+	display: inline-block;
+	list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #74AFAD;
+    position: fixed;
+	top: 0;
+    width: 100%;
+}
+#social{
+	float: right;
+}
+li {
+    float: left;
+}
+li a {
+
+	display: block;
+    color: #000;
+    text-align: center;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+li a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+li a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+}
+#qr{
+	float: right;
+}
+
