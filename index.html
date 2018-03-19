@@ -3,10 +3,12 @@
 <head>
 <script language="JavaScript" type="text/javascript" src="js/jquery-3.3.1.js"></script>
 <script language="JavaScript" type="text/javascript" src="js/js.js"></script>
+<script language="JavaScript" type="text/javascript" src="js/form.js"></script>
 
 <link rel="stylesheet" type="text/css" href="style.css" />
 <link rel="stylesheet" type="text/css" href="skillbar.css" />
 <link rel="stylesheet" type="text/css" href="timeline.css" />
+<link rel="stylesheet" type="text/css" href="form.css" />
 
 <link href="https://fonts.googleapis.com/css?family=Caveat+Brush" rel="stylesheet">
 <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
@@ -19,8 +21,6 @@
 <li><a href="#about">About Me</a></li>
 <li><a href="#photos">My Photos</a></li>
 <li><a href="#playlist">My Playlist</a></li>
-<li><a href="#like">Like</a></li>
-<li><a href="#qrcoder">QR code</a></li>
 <li><a href="#spa">Q&A</a></li>
 <li><a href="#contact">Contact Me</a></li>
 <li><a href="resources\CV.pdf">Download CV</a></li>
@@ -236,48 +236,8 @@ Eager to collaborate with a great team.
 </tr></table></center>
 </section>
 
-<section id="like" class="section">
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<h1 class="titles">Give me a like</h1>
 
-</section>
 
-<section id="qrcoder" class="section">
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<h1 class="titles">Scan my code</h1>
-<br/>
-<br/>
-</section>
 
 <section id="spa" class="section">
 <br/>
@@ -321,6 +281,14 @@ Eager to collaborate with a great team.
 <br/>
 <h1 class="titles">Contact Me</h1>
 <br/>
+<form id="form" class="topBefore" action="mailto:alextesy@gmail.com" method="post" enctype="text/plain">
+		
+  <input id="name" type="text" placeholder="NAME">
+  <input id="email" type="text" placeholder="E-MAIL">
+  <textarea id="message" type="text" placeholder="MESSAGE"></textarea>
+  <input id="submit" type="submit" value="GO!">
+
+</form>
 </section>
 <table id="bottom" style="width: 100%;">
   <tr>
