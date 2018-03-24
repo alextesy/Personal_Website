@@ -4,12 +4,21 @@
 <script language="JavaScript" type="text/javascript" src="js/jquery-3.3.1.js"></script>
 <script language="JavaScript" type="text/javascript" src="js/js.js"></script>
 <script language="JavaScript" type="text/javascript" src="js/form.js"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWXEtjiuyYKnqUx9_Lz3GMv6kkPWEAxjk&callback=initMap"
+type="text/javascript"></script>
+
+
+
+<link rel="stylesheet" type="text/css" href="comparison.css" />
 
 <link rel="stylesheet" type="text/css" href="style.css" />
 <link rel="stylesheet" type="text/css" href="skillbar.css" />
 <link rel="stylesheet" type="text/css" href="timeline.css" />
 <link rel="stylesheet" type="text/css" href="form.css" />
+<link rel="stylesheet" type="text/css" href="starWars.css" />
+<link rel="stylesheet" type="text/css" href="about.css" />
 
+<link href="https://fonts.googleapis.com/css?family=Faster+One|Old+Standard+TT" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Caveat+Brush" rel="stylesheet">
 <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
 
@@ -20,19 +29,19 @@
 <div id="menu">
 <li><a href="#about">About Me</a></li>
 <li><a href="#photos">My Photos</a></li>
-<li><a href="#playlist">My Playlist</a></li>
+<li><a href="#playlist">My Playlists</a></li>
 <li><a href="#spa">Q&A</a></li>
 <li><a href="#contact">Contact Me</a></li>
 <li><a href="resources\CV.pdf">Download CV</a></li>
 
 <div id=social>
   
-  <li><a href="https://www.linkedin.com/in/kremiansky/"><img src="resources\icons\linkedin.png" style="width:22px"/></a></li>
-  <li><a href="https://github.com/alextesy"><img src="resources\icons\github.png" style="width:22px"/></a></li>
-  <li><a href="https://www.facebook.com/alextesy"><img src="resources\icons\facebook.png" style="width:22px"/></a></li>
-  <li><a href="https://twitter.com/alextesy"><img src="resources\icons\twitter.png" style="width:22px"/></a></li>
-  <li><a href="https://open.spotify.com/user/22kziydvdaapvuuh3netmskwa/playlist/7MPNWOroKn9CBo6q2qXn0Q"><img src="resources\icons\spotify.png" style="width:22px"/></a></li>
-  <li><a href="https://www.instagram.com/alextesy/"><img src="resources\icons\instagram.png" style="width:22px"/></a></li>
+  <li><a href="https://www.linkedin.com/in/kremiansky/" target="_blank"><img src="resources\icons\linkedin.png" style="width:22px"/></a></li>
+  <li><a href="https://github.com/alextesy" target="_blank"><img src="resources\icons\github.png" style="width:22px"/></a></li>
+  <li><a href="https://www.facebook.com/alextesy" target="_blank"><img src="resources\icons\facebook.png" style="width:22px"/></a></li>
+  <li><a href="https://twitter.com/alextesy" target="_blank"><img src="resources\icons\twitter.png" style="width:22px"/></a></li>
+  <li><a href="https://open.spotify.com/user/22kziydvdaapvuuh3netmskwa/playlist/7MPNWOroKn9CBo6q2qXn0Q" target="_blank"><img src="resources\icons\spotify.png" style="width:22px"/></a></li>
+  <li><a href="https://www.instagram.com/alextesy/" target="_blank"><img src="resources\icons\instagram.png" style="width:22px"/></a></li>
 </div>
 </div>
 
@@ -42,14 +51,20 @@
 <br/><h1 class="titles">About Me</h1>
 
 
+<h4><span class="l">Hi</span><span class="o">I'm</span>
+  <span class="v">Alex.</span><span class="e">                       Passionate        ,          about people      ,      technology, languages,   movies and music.</span></h4> 
 
-<br/>
-Passionate about people, technology, languages, movies and music. 
-<br/>
-I am positive, opinionated, sharp and always curious. 
-<br/>
-Eager to collaborate with a great team.
-<br/>
+
+
+
+
+      
+   
+
+
+
+
+
 
 <center><div class="timeline">
 
@@ -117,7 +132,7 @@ Eager to collaborate with a great team.
   </div></center>
 
 
-<h1>Coding Skills</h1>
+<h2>Coding Skills</h2>
 
 <div class="skillbar clearfix " data-percent="80%">
 	<div class="skillbar-title" style="background: #d35400;"><span>Java</span></div>
@@ -168,10 +183,13 @@ Eager to collaborate with a great team.
 </section>
 
 <section id="photos" class="section">
-
-<h1	class="titles" >My Photos</h1>
 <br/>
-
+<br/>
+<br/>
+<br/>
+<h1 class="titles">My Photos</h1>
+<br/>
+<br/>
 
 <center><table>
   <tr><td> <div class="polaroid" style="transform: rotate(10deg);">
@@ -206,7 +224,11 @@ Eager to collaborate with a great team.
   </div></td></tr>
   </table></center>
   
-   
+  <br/>
+  <br/>
+  <br/>
+
+  <div id="map_canvas" style="width: 100%; height:500px;"></div>
 
     
 
@@ -221,11 +243,12 @@ Eager to collaborate with a great team.
 <br/>
 <br/>
 <section id="playlist" class="section">
-<h1 class="titles">My Playlist</h1>
-<br/>
-
 
 <br/>
+<br/>
+<br/>
+<br/>
+<h1 class="titles">My Playlists</h1>
 <br/>
 <br/>
 <center><table><tr>
@@ -240,18 +263,7 @@ Eager to collaborate with a great team.
 
 
 <section id="spa" class="section">
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
+
 <br/>
 <br/>
 <br/>
@@ -259,28 +271,70 @@ Eager to collaborate with a great team.
 <h1 class="titles">Amswers</h1>
 <br/>
 <br/>
-<br/>
+<div class="background">
+    <div class="container2">
+      <div class="panel pricing-table">
+        
+        <div class="pricing-plan">
+          <img src="resources\Picture2.png" alt="" class="pricing-img">
+          <h2 class="pricing-header">Web 1.0</h2>
+          <div class="pricing-features">
+              <span class="pricing-price">Static</span>
+              <p class="pricing-features-item">There is only limited interaction between sites and web users. Simply an information portal where users passively receive information without being given the opportunity to post reviews, comments, and feedback.</p>
+          </div>
+          <a href="http://www.arngren.net/" target="_blank" class="pricing-button">Example</a>
+        </div>
+        
+        <div class="pricing-plan">
+          <img src="resources\Picture3.png" alt="" class="pricing-img">
+          <h2 class="pricing-header">Web 2.0</h2>
+          <div class="pricing-features">
+              <span class="pricing-price">Writable</span>
+              <p class="pricing-features-item">Unlike Web 1.0, Web 2.0 facilitates interaction between web users and sites, so it allows users to interact more freely with each other. Web 2.0 encourages participation, collaboration, and information sharing. </p>
+          </div>
+          <a href="https://en.wikipedia.org/wiki/Main_Page" target="_blank" class="pricing-button">Example</a>
+        </div>
+        
+        <div class="pricing-plan">
+          <img src="resources\Picture4.png" alt="" class="pricing-img">
+          <h2 class="pricing-header">Web 3.0</h2>
+          <div class="pricing-features">
+              <span class="pricing-price">Executable</span>
+              <p class="pricing-features-item">Web 3.0 is a semantic web which refers to the future. In Web 3.0, computers can interpret information like humans and intelligently generate and distribute useful content tailored to the needs of users. </p>
+          </div>
+          <a href="https://www.magicleap.com/" target="_blank" class="pricing-button">Example</a>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+
+
+<h2>
+ Lets Examine the next used case:  Searching a specific query.
+</h2>
+<p  style="font-family: 'Ariel', serif;font-size: 20px;">
+  Searching A specific query in Web 1.0 would be extremely difficult. First of all you would have to know the name of the Website (No Search Engines) that specializes on the domain of the querry. When the user will enter the site he probably will be able to search there but there won't be any other options - no posting comments, no sharing, nothing Interactive. <strong>Only readible - static pages.</strong>
+</p>
+<p  style="font-family: 'Old Standard TT',serif;font-size: 20px;">
+    In web 2.0 you can easily visit Google (or any other) search-engine and search your query there. It will provide with multiple sites that can answer your question. In most of them you will be able to comment, search for recommndations, share on social media and many more options.
+</p>
+<p style="font-family: 'Faster One', cursive;font-size: 20px;">
+  Web 3.0  will    probably    know    your    query    before you'll type it. It will prepare the best fitting answers to you (based on your preferences and studying your behaviour) and deliver it to you automatically.
+</p>
 </section>
 
 <section id="contact" class="section">
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
+
 <br/>
 <br/>
 <br/>
 <br/>
 <h1 class="titles">Contact Me</h1>
 <br/>
+<br/>
+
 <form id="form" class="topBefore" action="mailto:alextesy@gmail.com" method="post" enctype="text/plain">
 		
   <input id="name" type="text" placeholder="NAME">
@@ -292,7 +346,7 @@ Eager to collaborate with a great team.
 </section>
 <table id="bottom" style="width: 100%;">
   <tr>
-    <td><iframe src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.kremiansky.com&width=450&layout=standard&action=like&size=small&show_faces=true&share=true&height=80&appId" width="450" height="80" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe><br/></td>
+    <td><iframe id="facebook" src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fsj8hkhrjfmes4h5rvu0sfw-on.drv.tw%2FPersonal_Website%2Findex.html&width=450&layout=standard&action=like&size=large&show_faces=true&share=true&height=80&appId" width="450" height="80" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe></td>
     <td><img id="qr" src="resources\QR.png" style="float: right;" ></td>
   </tr>
 </table>
